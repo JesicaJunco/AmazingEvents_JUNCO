@@ -30,9 +30,8 @@ section {
     border: 3px solid rgb(110, 107, 107);
     border-style: groove;
 }
-.search{
-    border: 1px solid red;
-  
+div form.d-flex{ 
+    margin-left: 25rem;
 }
 table{
     margin: 2rem;
