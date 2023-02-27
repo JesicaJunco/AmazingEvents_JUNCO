@@ -27,11 +27,13 @@ body{
     border-top-right-radius: calc(0.25rem - 1px);
   }
 footer{
-    border: 1px solid red;
     min-height: 5vh;
 }
-footer span{
-    border: 1px solid rgb(48, 229, 24);
+.cohort{
+    margin-left: 60rem;
+}
+.nav{
+    margin-inline: -40rem;
 }
 #carouselExampleAutoplaying .carousel-inner, carousel-item{
     border:groove;
