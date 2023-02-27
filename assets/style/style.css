@@ -41,7 +41,7 @@ footer{
     object-fit:cover;
     height: 50vh;
 }
-section {
+aside {
     border: 3px solid rgb(110, 107, 107);
     border-style: groove;
 }
@@ -52,7 +52,12 @@ table{
     margin: 2rem;
     width: 60%;
     border-collapse: collapse;
-    box-shadow: 10px 10px rgb(151, 41, 59);
+    border-collapse: separate;
+    border: 3px dashed black;
+    box-shadow: 5px 5px rgb(151, 41, 59);
+}
+.container table{
+    border-color: black;
 }
 td, th{
     border: 1px solid black ;
