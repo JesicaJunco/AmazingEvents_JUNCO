@@ -14,17 +14,18 @@ body{
     
 }
 .contenedor{
-    border: 1px solid red;
     display: flex;
     align-content: baseline;
     align-items:stretch;
     gap: 1rem;
     text-align: justify;
 }
-div img{
-    object-fit: cover;
-    position: relative;
-}
+.card-img-top {
+    width: 100%;
+    height: 200px !important;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
 footer{
     border: 1px solid red;
     min-height: 5vh;
