@@ -12,7 +12,7 @@ future.forEach((event) => {
   template.querySelector(".card-title").textContent = event.name;
   template.querySelector(".card-text").textContent = event.description;
   template.querySelector(".card-img-top").src = event.image;
-  template.querySelector(".card-price").textContent = event.price;
+  template.querySelector(".card-price").innerHTML= event.price;
 
   const copia = template.cloneNode(true);
   fragment.appendChild(copia);
