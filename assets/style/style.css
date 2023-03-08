@@ -35,14 +35,14 @@ main {
 }
 footer {
   min-height: 5vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem; */
 }
-.cohort {
+/* .cohort {
   margin-left: 50rem;
-}
+} */
 .nav {
   margin-inline: -40rem;
 }

@@ -1,4 +1,4 @@
-import data from "./amazing.js";
+import data from "../script/amazing.js";
 const fecha = data.currentDate;
 
 let { events } = data;
