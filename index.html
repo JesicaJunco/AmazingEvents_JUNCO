@@ -68,14 +68,15 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <aside class="form-check d-flex flex-wrap align-items-center gap-1 p-2 justify-content-around">
-            <div class="form-check">
+        <aside id="checkContainer"
+            class="form-check d-flex flex-wrap align-items-center gap-1 p-2 justify-content-around">
+            <!-- <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckCategory1">
                 <label class="form-check-label" for="flexCheckCategory1">
                     Category
                 </label>
-            </div>
-            <div class="form-check">
+            </div> -->
+            <!--   <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckCategory2" checked>
                 <label class="form-check-label" for="flexCheckCategory2">
                     Category
@@ -98,21 +99,22 @@
                 <label class="form-check-label" for="flexCheckCategory5">
                     Category
                 </label>
-            </div>
-            <div>
-                <form class="d-flex">
-                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
+            </div>-->
         </aside>
+        <div>
+            <form class="d-flex">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
         <div class="container d-flex">
-            <div class="card-group row  row-cols-sm-1 row-cols-md-2 row-cols-lg-3 justify-content-center p-2 ">
-                <template class="plantilla">
+            <div id="contenedorCard"
+                class="card-group row  row-cols-sm-1 row-cols-md-2 row-cols-lg-3 justify-content-center p-2 ">
+               <!-- <template class="plantilla">
                     <div class="d-flex mb-3 justify-content-center">
                         <div class="card h-100 border-redonded-8px shadow-sm p-1 $gray-500 aling-items-center">
                             <div class="card-body d-flex flex-column">
-                                <img class="card-img-top " src="./assets/img/Food_Fair.jpg" alt="Card img food fair">
+                                <img class="card-img-top " src="${image}" alt="Card img food fair">
                                 <div class="d-flex flex-column flex-grow-1">
                                     <h5 class="card-title">Food fair</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
@@ -129,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                </template>
+                </template>-->
                 <!--  <div class="card">
                     <div class="card-body">
                         <img class="card-img-top " src="./assets/img/Food_Fair.jpg"

@@ -48,8 +48,8 @@ footer {
 }
 #carouselExampleAutoplaying .carousel-inner,
 carousel-item {
-  border: groove;
-  position: relative;
+ /*  border: groove;*/
+  position: relative; 
   object-fit: cover;
   height: 50vh;
 }
