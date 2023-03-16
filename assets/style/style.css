@@ -53,8 +53,8 @@ carousel-item {
   object-fit: cover;
   height: 50vh;
 }
-aside {
-  border: 3px solid rgb(110, 107, 107);
+aside{
+  border: 2px solid rgb(110, 107, 107);
   border-style: groove;
 }
 
