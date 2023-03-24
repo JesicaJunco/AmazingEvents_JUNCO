@@ -1,16 +1,27 @@
-import data from "./amazing.js";
 
-const queryString = location.search;
-const params = new URLSearchParams(queryString);
-const detailId = params.get('id');
-const detailEvent = data.events.find(event => event._id == detailId);
 let detail = document.querySelector('#detail');
-createDetails(detailEvent, detail);
-console.log(detailId)
-function createDetails(item, contenedor){
-    let details = document.createElement('div');
-    details.classList.add('detail')
-    details.innerHTML =`<div class="card mb-3" style="max-width: 540px;">
+let eventsList;
+async function getEvents() {
+  await fetch('../amazing.json')
+    .then(response => response.json()
+      .then(data => {
+        eventsList = data.events
+        console.log(eventsList)
+
+        const queryString = location.search;
+        const params = new URLSearchParams(queryString);
+        const detailId = params.get('id');
+        const detailEvent = data.events.find(event => event._id == detailId);
+
+        createDetails(detailEvent, detail);
+
+      })).catch(err => console.error(err))
+}getEvents();
+
+function createDetails(item, contenedor) {
+  let details = document.createElement('div');
+  details.classList.add('detail')
+  details.innerHTML = `<div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="${item.image}" class="img-fluid rounded-start" alt="...">
@@ -34,9 +45,6 @@ function createDetails(item, contenedor){
     </div>
   </div>
    `
-                contenedor.appendChild(details)
+  contenedor.appendChild(details)
 }
-
-
-
 

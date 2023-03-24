@@ -7,8 +7,8 @@ function pintarCard(array, cardsContainer){
     let tarjetas = ''
     array.forEach(event => {
         tarjetas += `
-        <div class="d-flex mb-3 justify-content-center">
-        <div class="card h-100 border-redonded-8px shadow-sm p-1 $gray-500 aling-items-center">
+        <div class="d-flex flex-wrap">
+        <div class="card h-100 border-redonded-8px $gray-500 aling-items-center">
             <div class="card-body d-flex flex-column">
                 <img class="card-img-top " src="${event.image}" alt="Card img food fair">
                 <div class="d-flex flex-column flex-grow-1">
@@ -27,21 +27,6 @@ function pintarCard(array, cardsContainer){
     })
     cardsContainer.innerHTML = tarjetas;
 } 
-
-
-/* function pintarCard(array) {
-    padre.innerHTML = "";
-    array.forEach((event) => {
-        template.querySelector(".card-title").textContent = event.name;
-        template.querySelector(".card-text").textContent = event.description;
-        template.querySelector(".card-img-top").src = event.image;
-        template.querySelector(".card-price").innerHTML = event.price;
-
-        const copia = template.cloneNode(true);
-        fragment.appendChild(copia);
-    });
-    padre.appendChild(fragment);
-} */
 
 function createCheckboxes(array, contenedorCheckbox) {
     //le pido que me pase solo de la data la categoria
@@ -66,8 +51,8 @@ function createCheckboxes(array, contenedorCheckbox) {
     contenedorCheckbox.innerHTML = checkboxes;
 }
 
-function filtroCombinado(events, texto, contenedorCard){
-    let filtroSearch = filtrarPorTexto(events,texto)
+function filtroCombinado(eventsList, texto, contenedorCard){
+    let filtroSearch = filtrarPorTexto(eventsList,texto)
     let filtroCheck = filtrarCategoria(filtroSearch)
     pintarCard(filtroCheck, contenedorCard)
 }
@@ -92,3 +77,7 @@ function filtrarCategoria(array){
 
 
 export { pintarCard, createCheckboxes,filtroCombinado,filtrarPorTexto,filtrarCategoria }
+
+
+
+

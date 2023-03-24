@@ -30,7 +30,7 @@ main {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 .card{
-    width: 18rem;
+    width: 18rem !important;
     gap: 5rem;
 }
 footer {
