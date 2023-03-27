@@ -1,9 +1,6 @@
-import {filtrarCategoria} from "./functions.js";
 
 let fecha;
 let eventsList;
-let upcomingEvents;
-let pastEvents;
 async function getEvents(){
   await fetch('../amazing.json')
   .then (response => response.json()) 
@@ -85,7 +82,6 @@ function showUpcomingStatisticsCategory(eventsList){
 } 
 
 //funcion de estadisticas de Past Events por categoria
-
 function pastEvent(eventsList, fecha) {
   let eventos = []
   eventsList.forEach((event) => {
@@ -114,7 +110,7 @@ function showPastStatistics(eventsList) {
   tbody.innerHTML = row;
 }
 
-//	Revenues by categories
+//	Revenues by categories, calcula los ingresos generados por eventos en una categoría particular, ya sea en el pasado o en el futuro, según el valor de tipoEvento.
 function renuevesCategories(eventsList, category, fecha, tipoEvento){
   let eventos;
   if(tipoEvento === "past"){
@@ -133,7 +129,7 @@ let revenues = filteredEvents.reduce((total, events) => {
   return revenues; 
 } 
 
-//Percentage of attendance by category
+//Percentage of attendance by category, calcula el porcentaje de asistencia a eventos en una categoría particular, ya sea en el pasado o en el futuro, según el valor de tipoEvento.
 function percentageOfAttendance(eventsList, category, fecha, tipoEvento){
   let eventos;
   if(tipoEvento === "past"){

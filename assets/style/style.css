@@ -58,9 +58,6 @@ aside{
   border-style: groove;
 }
 
-/* div form.d-flex {
-  margin-left: 25rem;
-} */
 .contact{
   width: 20rem;
 }
@@ -78,4 +75,15 @@ table {
 td,
 th {
   border: 1px solid black;
+  justify-content: space-around;
+  text-align: center;
+}
+.titletable{
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(151, 41, 59) ;
+}
+tr{
+  justify-content: space-around;
+  text-align: center;
 }
