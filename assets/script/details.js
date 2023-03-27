@@ -21,15 +21,15 @@ async function getEvents() {
 function createDetails(item, contenedor) {
   let details = document.createElement('div');
   details.classList.add('detail')
-  details.innerHTML = `<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
+  details.innerHTML = `<div class="card" style="max-width: 540px;">
+    <div>
+      <div >
         <img src="${item.image}" class="img-fluid rounded-start" alt="...">
       </div>
-      <div class="col-md-8">
+      <div>
         <div class="card-body">
-          <h5 class="card-title">${item.name}</h5>
-          <p class="card-text">${item.description}</p>
+          <h5 class="card-title text-center">${item.name}</h5>
+          <p class="card-text text-center">${item.description}</p>
           <ul class="lista_simple">
               <li>${item.name}</li>
               <li>${item.data}</li>
