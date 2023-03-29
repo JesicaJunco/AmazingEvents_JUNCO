@@ -71,11 +71,14 @@ function showUpcomingStatisticsCategory(eventsList){
   let categorias = Array.from(categoria)
   let row = "";
   categorias.forEach(category => {
+    let revenue = renuevesCategories(eventsList,category,fecha, "upcoming");
+    if (revenue > 0 && !isNaN(revenue)) {
     row += `<tr>
     <td>${(category)}</td>
     <td>$${renuevesCategories(eventsList,category,fecha, "upcoming")}</td>
     <td>${percentageOfAttendance(eventsList,category,fecha, "upcoming")}%</td>
   </tr>`;
+    }
   });
   
   tbody.innerHTML = row;
